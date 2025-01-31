@@ -119,7 +119,7 @@ if (detectionResults.value != null) {
     val inferenceTimeThreshold = 70L // ms
     
     if (detectionResults.value!!.inferenceTime > inferenceTimeThreshold) { 
-        Log.d("CS330", "GPU too slow, switching to CPU start") 
+        Log.d("GPU too slow, switching to CPU start") 
 
         val cpuClassifier = PersonClassifier()
         cpuClassifier.initialize(
@@ -135,7 +135,7 @@ if (detectionResults.value != null) {
             image.close()
         }
 
-        Log.d("CS330", "GPU too slow, switching to CPU done")
+        Log.d("GPU too slow, switching to CPU done")
     }
 }
 ```
